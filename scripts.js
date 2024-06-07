@@ -1,29 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.getElementById('nav-bar');
-    let prevScrollpos = window.pageYOffset;
-
-    window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            nav.style.top = "0";
-        } else {
-            nav.style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-
+document.addEventListener('DOMContentLoaded', function() {
     const chatbotMessages = document.getElementById('chatbot-messages');
     const chatbotInput = document.getElementById('chatbot-input');
     const chatbotSend = document.getElementById('chatbot-send');
     const chatbot = document.getElementById('chatbot');
 
-    chatbotSend.addEventListener('click', function () {
+    chatbotSend.addEventListener('click', function() {
         const message = chatbotInput.value.trim();
         if (message) {
             addMessageToChatbot('User', message);
             chatbotInput.value = '';
             // Simulate chatbot response
-            setTimeout(function () {
+            setTimeout(function() {
                 addMessageToChatbot('Chatbot', 'This is a response.');
             }, 1000);
         }
@@ -36,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
 
-    window.toggleChatbot = function () {
+    window.toggleChatbot = function() {
         if (chatbot.style.display === 'none' || chatbot.style.display === '') {
             chatbot.style.display = 'flex';
         } else {
@@ -44,4 +31,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
-
