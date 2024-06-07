@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Relief&display=swap">
+    <style>
+        body {
+            background: fixed url(images/img8.jpeg);
+            background-size: 10%;
+        }
+    </style>
+    <title>HOME</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="a">
+        <h2 style="background: rgb(60, 255, 0);"><a href="index.html">🏘️Home🏡</a></h2>
+        <h3 style="background: rgb(60, 255, 0);"><a href="explore2/explore2.html">🔭Explore🚀</a></h3>
+        <h3 style="background: rgb(60, 255, 0);"><a href="description.html">📜Description📑</a></h3>
+        <h3 style="background: rgb(60, 255, 0);"><a href="aboutus.html">ℹAbout Us💨👨‍💻</a></h3>
+    </nav>
+
+    <div id="pages" style="display: flex; gap: 10%;">
+        <h2 style="background: rgb(0, 238, 255);"><a href="order.html">✍️Order🛒</a></h2>
+        <h2 style="background: rgb(0, 238, 255);"><a href="services.html">🌀Services👨‍🔧</a></h2>
+    </div>
+
+    <style>
+        #pages {
+            color: #f6fa04;
+            align-items: center;
+            display: flex;
+            gap: 2%;
+            border-radius: 12px;
+            border-color: #0bf803;
+            border-width: 2px;
+            border-style: dashed;
+        }
+    </style>
+
+    <div id="img" style="position: absolute; position: fixed; top: 0%; margin-left: 80%;">
+        <a href="https://ankitbugaliya.blogspot.com" target="_blank" rel="noopener noreferrer"><img
+                src="logos/logo1.jpeg" alt="" width="90px" style="border-radius: 50%;"></a>
+        <a href="https://ankusena.github.io/mysite" target="_blank" rel="noopener noreferrer"><img
+                src="logos/logo2.jpeg" alt="" width="90px" style="border-radius: 50%;"></a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>WELCOME To Our AMAZING <br> And Mind-Blowing Creation <br>
+                <div style="color: #f70505;">"ANKU SENA STUDIO"</div>
+            </h1>
+            <h2 style="color: greenyellow;">Your one-stop destination for all your design needs.</h2>
+        </div>
+    </div>
+
+    <div id="b">
+        <h1>Let's Begin <br> With A <br> Short LOOK <br> Of This <br> Short Creation</h1>
+    </div>
+
+    <div id="video1">
+        <video controls loop src="videos/video1.mp4" height="400px" width="640px"></video>
+    </div>
+
+    <div id="d">
+        <h1>It's Just An <br> ANIMATION <br> Of Our <br> Amazing <br> CEATION</h1>
+    </div>
+
+    <div id="video2">
+        <video controls loop src="videos/video2.mp4" height="400px" width="640px"></video>
+    </div>
+
+    <div id="e">
+        <h1 style="text-align: left;">Let's Give <br> One Movement <br> To The <br> Representation</h1>
+    </div>
+
+    <div id="video3">
+        <video controls loop src="videos/video3.mp4" height="400px" width="640px"></video>
+    </div>
+
+    <div class="loading">
+        <span style="background: #0408fa;">DESIGNED BY - LAKSHYA & ANKIT</span>
+    </div>
+
+    <div id="f"></div>
+
+    <!-- Chatbot -->
+    <div id="chatbot-icon" class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">Chatbot</div>
+        <div class="chatbot-body">
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type a message...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
