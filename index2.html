@@ -11,70 +11,12 @@
             background: fixed url(images/img8.jpeg);
             background-size: 10%;
         }
-
-        /* Media query for mobile devices */
-        @media (max-width: 768px) {
-
-            #a,
-            #img {
-                display: none;
-            }
-
-            #b {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                background: rgba(2, 177, 247, 0.13);
-            }
-
-            video {
-                width: 100%;
-                height: auto;
-            }
-
-            .loading {
-                font-size: 20px;
-            }
-        }
-
-        /* Chatbot icon style */
-        .chatbot-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background-color: #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        /* Chatbot container style */
-        .chatbot-container {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            z-index: 1000;
-        }
     </style>
     <title>HOME</title>
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav id="a">
         <h2 style="background: rgb(60, 255, 0);"><a href="index.html">🏘️Home🏡</a></h2>
         <h3 style="background: rgb(60, 255, 0);"><a href="explore2/explore2.html">🔭Explore🚀</a></h3>
@@ -87,7 +29,20 @@
         <h2 style="background: rgb(0, 238, 255);"><a href="services.html">🌀Services👨‍🔧</a></h2>
     </div>
 
-    <div id="img" style="position: fixed; top: 0; margin-left: 80%;">
+    <style>
+        #pages {
+            color: #f6fa04;
+            align-items: center;
+            display: flex;
+            gap: 2%;
+            border-radius: 12px;
+            border-color: #0bf803;
+            border-width: 2px;
+            border-style: dashed;
+        }
+    </style>
+
+    <div id="img" style="position: absolute; position: fixed; top: 0%; margin-left: 80%;">
         <a href="https://ankitbugaliya.blogspot.com" target="_blank" rel="noopener noreferrer"><img
                 src="logos/logo1.jpeg" alt="" width="90px" style="border-radius: 50%;"></a>
         <a href="https://ankusena.github.io/mysite" target="_blank" rel="noopener noreferrer"><img
@@ -97,9 +52,7 @@
     <div class="container">
         <div class="content">
             <h1>WELCOME To Our AMAZING <br> And Mind-Blowing Creation <br>
-                <div style="color: #f70505;">
-                    "ANKU SENA STUDIO"
-                </div>
+                <div style="color: #f70505;">"ANKU SENA STUDIO"</div>
             </h1>
             <h2 style="color: greenyellow;">Your one-stop destination for all your design needs.</h2>
         </div>
@@ -135,24 +88,18 @@
 
     <div id="f"></div>
 
-    <!-- Chatbot Icon -->
-    <div class="chatbot-icon" id="chatbot-icon">💬</div>
-
-    <!-- Chatbot Container -->
-    <div class="chatbot-container" id="chatbot-container">
-        <!-- Chatbot content will go here -->
+    <!-- Chatbot -->
+    <div id="chatbot-icon" class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">Chatbot</div>
+        <div class="chatbot-body">
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type a message...">
+            <button id="chatbot-send">Send</button>
+        </div>
     </div>
 
-    <script>
-        document.getElementById('chatbot-icon').addEventListener('click', function () {
-            var chatbotContainer = document.getElementById('chatbot-container');
-            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
-                chatbotContainer.style.display = 'block';
-            } else {
-                chatbotContainer.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
